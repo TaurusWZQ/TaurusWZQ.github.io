@@ -8,11 +8,11 @@ author: TaurusWZQ
 
 toc: true
 comments: true
-typora-root-url: ../../TaurusWZQ.github.io
+
 math: false
 mermaid: true
 
-
+typora-root-url: ..
 ---
 
 # 真正意义上的第一篇博客～ 
@@ -49,4 +49,4 @@ int main()
 }
 ```
 
-![_20220401172542](../assets/blog_res/2022-04-01-first-post.assets%20/_20220401172542-16488093543521.jpg)
+![_20220401172542](/assets/2022-04-01-first-post.assets/_20220401172542.jpg)
