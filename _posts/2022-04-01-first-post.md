@@ -12,7 +12,7 @@ comments: true
 math: false
 mermaid: true
 
-typora-root-url: ..\assets\blog_res
+typora-root-url: ..
 ---
 
 # 真正意义上的第一篇博客～ 
