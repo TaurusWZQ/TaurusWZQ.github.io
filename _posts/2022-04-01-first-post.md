@@ -12,7 +12,7 @@ comments: true
 math: false
 mermaid: true
 
-typora-root-url: ..\assets\blog_res
+typora-root-url: ../../TaurusWZQ.github.io
 ---
 
 # 真正意义上的第一篇博客～ 
@@ -49,4 +49,4 @@ int main()
 }
 ```
 
-![_20220401172542](/2022-04-01-first-post.assets/_20220401172542.jpg)
+![_20220401172542](/assets/blog_res/2022-04-01-first-post.assets/_20220401172542-16489071318151.jpg)
