@@ -49,4 +49,4 @@ int main()
 }
 ```
 
-![_20220401172542](/assets/blog_res/2022-04-01-first-post.assets/_20220401172542.jpg)
+![myself](../assets/blog_res/2022-04-01-first-post.assets/myself.jpg)
