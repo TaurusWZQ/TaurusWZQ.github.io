@@ -63,7 +63,57 @@ int  main() {
 }
 ```
 
+按照理论分析，这样做确实可以做到防止被继承。
+**注意：又有一个新的问题，对，就是只能在堆上创建，无法再栈上实现这个类**
+这就是私有的构造函数的局限性。
 
 
 
+ 第二个方法
+
+利用友元不能被继承的特性，可以实现这样的类。
+主要思想，设计一个模板辅助类Base，将构造函数声明为私有的；再设计一个不能继承的类FinalClass,,将FinalClass 作为Base的友元类。将FinalClass虚继承Base。
+
+```c++
+include <iostream>
+using namespace std;
+
+template <typename T>
+class Base{
+    friend T;
+private:
+    Base(){
+        cout << "base" << endl;
+    }
+    ~Base(){}
+};
+
+class FinalClass : virtual public Base<FinalClass>{  
+ //一定注意 必须是虚继承
+public:
+    FinalClass(){
+        cout << "FinalClass()" << endl;
+    }
+};
+
+class C:public FinalClass{
+public:
+    C(){}     //继承时报错，无法通过编译
+};
+
+
+int main(){
+    FinalClass b;      //B类无法被继承
+    //C c;
+    return 0;
+}
+```
+
+类Base的构造函数和析构函数因为是私有的，只有Base类的友元可以访问，FinalClass类在继承时将模板的参数设置为了FinalClass类，所以构造FinalClass类对象时们可以直接访问父类（Base）的构造函数。
+
+C 在调用构造函数时，不会先调用FinalClass的构造函数，而是直接调用Base的构造函数，C不是Base的友元类，所以无法访问。这样的话C就不能继承FinalClass。
+
+
+
+**当然在C++11以后，C++引入了新的关键词 new keyword final ，直接在类后面加上final关键字，就可以防止该类被继承**
 
