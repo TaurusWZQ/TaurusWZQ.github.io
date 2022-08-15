@@ -50,8 +50,8 @@ public:
          pIntance = NULL;
     }
 private:
-	A(){}
-	~A(){}
+	A() {}
+	~A() {}
 public:
     int num;
 };
@@ -75,11 +75,11 @@ int  main() {
 主要思想，设计一个模板辅助类Base，将构造函数声明为私有的；再设计一个不能继承的类FinalClass,,将FinalClass 作为Base的友元类。将FinalClass虚继承Base。
 
 ```c++
-include <iostream>
+#include <iostream>
 using namespace std;
 
 template <typename T>
-class Base{
+class Base {
     friend T;
 private:
     Base(){
@@ -88,21 +88,21 @@ private:
     ~Base(){}
 };
 
-class FinalClass : virtual public Base<FinalClass>{  
+class FinalClass : virtual public Base<FinalClass> {  
  //一定注意 必须是虚继承
 public:
-    FinalClass(){
+    FinalClass() {
         cout << "FinalClass()" << endl;
     }
 };
 
 class C:public FinalClass{
 public:
-    C(){}     //继承时报错，无法通过编译
+    C() {}     //继承时报错，无法通过编译
 };
 
 
-int main(){
+int main() {
     FinalClass b;      //B类无法被继承
     //C c;
     return 0;
@@ -115,5 +115,27 @@ C 在调用构造函数时，不会先调用FinalClass的构造函数，而是�
 
 
 
+第三个方法
+
 **当然在C++11以后，C++引入了新的关键词 new keyword final ，直接在类后面加上final关键字，就可以防止该类被继承**
+
+**同时如果在虚函数后面加上final关键词，该虚函数也无法被复写(overriding)**
+
+```c++
+#include<iostream>
+using namespace std;
+struct Base1 final {};
+//struct Derived1 : Base1 {}; //[Error] cannot derive from 'final' base 'Base1' in derived type 'Derived1'
+
+struct Base2 {
+    virtual void f() final;
+};
+
+struct Derived2 : Base2 {
+    //void f(); //[Error] overriding final function 'virtual void Base2::f()'
+}
+int main() {
+    return 0;
+}
+```
 
