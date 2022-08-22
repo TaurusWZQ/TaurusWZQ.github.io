@@ -47,7 +47,7 @@ C++通过public，protected，private 三个关键字来控制成员变量和成
 
 
 
-下面附上demo信息 （具体代码见
+下面附上demo信息 （具体代码见本人github TaurusWZQ下Demo_Of_MyBlog仓库 [TaurusWZQ/Demo_Of_MyBlog: Some demos of my blog (github.com)](https://github.com/TaurusWZQ/Demo_Of_MyBlog)）
 
 ```c++
 #include<iostream>
