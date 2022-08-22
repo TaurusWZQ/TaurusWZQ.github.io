@@ -3,12 +3,10 @@ title: 关于
 icon: fas fa-info
 order: 4
 ---
-- ### Hi there 👋, I'm Tom!
+- ### Hi there 👋, I'm TaurusWZQ!
 
-  - 🏫  _BSc in Computer Science_.
-  - 💻  I work on C / C++ / Java / Objective-C & Swift / Python / Markdown.
-  - 🧠  I used to take internship as an iOS developer at Bytedance Techonology.
-  - 🏖️  I will go to Shenzhen and work as a back-end engineer at Tencent.
-
-公众号: 汤姆还在写代码
+  - 🏫  Major in Vehicle Engineering.
+  - 💻  I’m interested in coding/dota2/car.
+  - 🧠  I’m currently learning CPP.
+  - 🏖️  How to reach me [whutwzq@gmail.com](mailto:whutwzq@gmail.com) or [1723208006@qq.com](mailto:1723208006@qq.com).
 
